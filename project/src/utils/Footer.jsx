@@ -1,6 +1,8 @@
-import { BsGithub, BsInstagram, BsLinkedin, BsTiktok } from "react-icons/bs";
+import { BsGithub, BsInstagram } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { BiCopyright } from "react-icons/bi";
+import { CiMail } from "react-icons/ci";
+import { FaOrcid } from "react-icons/fa";
 
 const Footer = () => {
   const goto = () => {
@@ -10,6 +12,12 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+
+  const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+  const emailLink = isMobile
+    ? "mailto:syafiq_1971@disroot.org"
+    : "https://mail.google.com/mail/?view=cm&fs=1&to=syafiq_1971@disroot.org";
 
   return (
     <footer className="w-full flex flex-col shadow-lg bg-purple-800 tablet:pt-5 pt-10 text-white bg-right bg-no-repeat bg-cover">
@@ -103,7 +111,7 @@ const Footer = () => {
       <div className="w-full flex flex-col bg-purple-500 text-purple-900 justify-center items-center font-extrabold pt-3 gap-1">
         <div className="flex items-center text-white gap-4">
           <a
-            href="https://www.instagram.com/syafiqparadisam/?igshid=ZGUzMzM3NWJiOQ=="
+            href="https://www.instagram.com/ganzz_fikkzzz/"
             target="_blank"
             rel="noreferrer"
           >
@@ -112,16 +120,7 @@ const Footer = () => {
             </div>
           </a>
           <a
-            href="https://www.tiktok.com/@fikkzketchee?lang=id-ID"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="rounded-full border-white border-2 border-solid p-2">
-              <BsTiktok size={"25px"} />
-            </div>
-          </a>
-          <a
-            href="https://github.com/syafiqparadisam"
+            href="https://github.com/syafiqtidakjagongoding"
             target="_blank"
             rel="noreferrer"
           >
@@ -130,12 +129,21 @@ const Footer = () => {
             </div>
           </a>
           <a
-            href="https://www.linkedin.com/in/syafiq-paradisam-b72749258"
+            href={emailLink}
             target="_blank"
             rel="noreferrer"
           >
             <div className="rounded-full border-white border-2 border-solid p-2">
-              <BsLinkedin size={"25px"} style={{ backgroundColor: "none" }} />
+              <CiMail size={"25px"} />
+            </div>
+          </a>
+          <a
+            href="https://orcid.org/0009-0008-7497-2175"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="rounded-full border-white border-2 border-solid p-2">
+              <FaOrcid size={"25px"} />
             </div>
           </a>
         </div>
