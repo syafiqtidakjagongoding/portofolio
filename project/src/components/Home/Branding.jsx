@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
-import { BsGithub, BsInstagram, BsTiktok, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsInstagram } from "react-icons/bs";
 import programmerIlustration from "/picture/illustration/peoplewithlaptopillustration.webp";
+import { FaOrcid } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
 import BrandingSosmed from "./BrandingSosmed";
 
 const Branding = () => {
+  const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+  const emailLink = isMobile
+    ? "mailto:syafiq_1971@disroot.org"
+    : "https://mail.google.com/mail/?view=cm&fs=1&to=syafiq_1971@disroot.org";
+
   return (
     <main
       className="h-screen lg:justify-around shadow-xl justify-center w-full items-center flex text-white"
@@ -27,9 +35,7 @@ const Branding = () => {
                 />
               }
               label={"instagram"}
-              link={
-                "https://www.instagram.com/syafiqparadisam/?igshid=ZGUzMzM3NWJiOQ=="
-              }
+              link={"https://www.instagram.com/ganzz_fikkzzz/"}
               animate={"fade-right"}
             />
             <BrandingSosmed
@@ -40,30 +46,30 @@ const Branding = () => {
                 />
               }
               label={"github"}
-              link={"https://github.com/syafiqparadisam"}
+              link={"https://github.com/syafiqtidakjagongoding/"}
+              animate={"fade-left"}
+            />
+            <BrandingSosmed
+              icon={
+                <CiMail
+                  color="white"
+                  className="text-2xl minilaptop:text-3xl"
+                />
+              }
+              label={"email"}
+              link={emailLink}
               animate={"fade-up"}
             />
             <BrandingSosmed
               icon={
-                <BsLinkedin
-                  color="blue"
+                <FaOrcid
+                  color="green"
                   className="text-2xl minilaptop:text-3xl"
                 />
               }
-              label={"linkedin"}
-              link={"https://www.linkedin.com/in/syafiq-paradisam-b72749258"}
+              label={"orcid"}
+              link={"https://orcid.org/0009-0008-7497-2175"}
               animate={"fade-up"}
-            />
-            <BrandingSosmed
-              icon={
-                <BsTiktok
-                  color="black"
-                  className="text-2xl minilaptop:text-3xl"
-                />
-              }
-              label={"tiktok"}
-              link={"https://www.tiktok.com/@fikkzketchee?lang=id-ID"}
-              animate={"fade-right"}
             />
           </ol>
         </div>
@@ -92,7 +98,8 @@ const Branding = () => {
               Service
             </Link>
             <Link
-              to="https://www.cake.me/syafiq-paradisam" target="_blank"
+              to="https://www.cake.me/syafiq-paradisam"
+              target="_blank"
               className="shadow-4xl font-semibold text-gray-200 border-gray-200 border bg-purple-900 minilaptop:py-3 py-2 px-6 rounded-xl minilaptop:text-lg hp:text-sm text-xs"
               data-aos="fade-down"
             >

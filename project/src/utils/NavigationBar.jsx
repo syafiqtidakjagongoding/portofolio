@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { BsGithub, BsInstagram } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
 import "../index.css";
@@ -83,7 +82,7 @@ const NavigationBar = () => {
         className={`flex minilaptop:pl-0 minilaptop:static z-50 absolute justify-start w-full items-start flex-col minilaptop:flex-row `}
       >
         <ol
-          className={`flex items-center others transition-transform duration-200 ease-in-out  font-semibold minilaptop:bg-none bg-primary minilaptop:rounded-none rounded-sm minilaptop:gap-0 ${transition} minilaptop:static absolute top-8 flex-col minilaptop:flex-row `}
+          className={`flex items-center justify-center others transition-transform duration-200 ease-in-out  font-semibold minilaptop:bg-none bg-primary minilaptop:rounded-none rounded-sm minilaptop:gap-0 ${transition} minilaptop:static absolute top-8 flex-col minilaptop:flex-row `}
         >
           <li className="text-white minilaptop:text-white minilaptop:hidden flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
             <Link
@@ -138,28 +137,6 @@ const NavigationBar = () => {
       </div>
 
       {/* SOSMED */}
-      <div className="minilaptop:flex hidden items-center justify-center gap-1 mr-5">
-        <a
-          href="https://github.com/syafiqparadisam"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="github"
-        >
-          <div className="p-4">
-            <BsGithub size={"25px"} color="white" />
-          </div>
-        </a>
-        <a
-          href="https://www.instagram.com/syafiqparadisam/?igshid=ZGUzMzM3NWJiOQ=="
-          target="_blank"
-          rel="noreferrer"
-          aria-label="instagram"
-        >
-          <div className="p-4">
-            <BsInstagram size={"25px"} color="white" />
-          </div>
-        </a>
-      </div>
     </nav>
   );
 };
